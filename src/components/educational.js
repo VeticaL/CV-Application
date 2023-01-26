@@ -5,7 +5,7 @@ class Education extends React.Component {
     return (
       <form>
         <label htmlFor="uni"></label>
-        <input type="text" className="uni" placeholder="university"></input>
+        <input type="text" className="uni" placeholder="University"></input>
         <label htmlFor="degree"></label>
         <input type="text" className="degree" placeholder="Degree"></input>
         <label htmlFor="start"></label>
