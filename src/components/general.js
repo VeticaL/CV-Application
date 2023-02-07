@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-import Preview from "./preview";
 
 class General extends Component {
   constructor(props) {
@@ -12,20 +11,13 @@ class General extends Component {
     };
   }
 
-  updateName = (e) => {
-    this.setState({ Name: e.target.value });
-  };
-
-  updateEmail = (e) => {
-    this.setState({ email: e.target.value });
-  };
-
-  updatePhoneNumber = (e) => {
-    this.setState({ phonenumber: e.target.value });
-  };
-
-  updateAddress = (e) => {
-    this.setState({ address: e.target.value });
+  preview = () => {
+    this.setState({
+      Name: document.getElementsByClassName("name").value,
+      email: document.getElementsByClassName("email").value,
+      phonenumber: document.getElementsByClassName("phonenumber").value,
+      address: document.getElementsByClassName("address").value,
+    });
   };
 
   render() {
@@ -33,36 +25,21 @@ class General extends Component {
       <div>
         <form>
           <label htmlFor="name"></label>
-          <input
-            type="text"
-            className="name"
-            placeholder="Full Name"
-            onChange={(e) => this.updateName(e)}
-          ></input>
+          <input type="text" className="name" placeholder="Full Name"></input>
           <label htmlFor="email"></label>
-          <input
-            type="email"
-            className="email"
-            placeholder="Email"
-            onChange={(e) => this.updateEmail(e)}
-          ></input>
+          <input type="email" className="email" placeholder="Email"></input>
           <label htmlFor="phoneNumber"></label>
           <input
-            type="text"
+            type="tel"
             className="phonenumber"
             placeholder="Phone Number"
-            onChange={(e) => this.updatePhoneNumber(e)}
           ></input>
           <label htmlFor="Address"></label>
-          <input
-            type="text"
-            className="address"
-            placeholder="Address"
-            onChange={(e) => this.updateAddress(e)}
-          ></input>
-          <button type="submit">Submit</button>
+          <input type="text" className="address" placeholder="Address"></input>
+          <button type="submit" onClick={this.preview}>
+            Submit
+          </button>
         </form>
-        <Preview info={this.state} />
       </div>
     );
   }
