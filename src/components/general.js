@@ -60,6 +60,7 @@ class General extends Component {
             placeholder="Address"
             onChange={(e) => this.updateAddress(e)}
           ></input>
+          <button type="submit">Submit</button>
         </form>
         <Preview info={this.state} />
       </div>

@@ -60,8 +60,10 @@ class Education extends React.Component {
             placeholder="End date"
             onChange={(e) => this.updateEnd(e)}
           ></input>
+          <button type="submit">Submit</button>
         </form>
         <Preview info={this.state} />
+        
       </div>
     );
   }

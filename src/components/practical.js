@@ -12,6 +12,7 @@ class Practical extends React.Component {
         <input type="text" className="start" placeholder="Start date"></input>
         <label htmlFor="end"></label>
         <input type="text" className="end" placeholder="End date"></input>
+        <button type="submit">Submit</button>
       </form>
     );
   }
