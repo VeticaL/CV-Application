@@ -4,56 +4,63 @@ class Education extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      Uni: "",
-      degree: "",
-      start: "",
-      end: "",
+      School: "",
+      Degree: "",
+      Date: "",
+      Location: "",
     };
+    this.updateInput = this.updateInput.bind(this);
   }
 
-  preview = () => {
-    this.setState({
-      Uni: document.getElementsByClassName("uni").value,
-      degree: document.getElementsByClassName("degree").value,
-      start: document.getElementsByClassName("start").value,
-      end: document.getElementsByClassName("end").value,
-    });
-  };
+  updateInput(event) {
+    if (event.target.className === "school") {
+      this.setState({ School: event.target.value });
+    } else if (event.target.className === "degree") {
+      this.setState({ Degree: event.target.value });
+    } else if (event.target.className === "date") {
+      this.setState({ Date: event.target.value });
+    } else if (event.target.className === "location") {
+      this.setState({ Location: event.target.value });
+    }
+  }
 
   render() {
     return (
       <div>
         <form>
-          <label htmlFor="uni"></label>
+          <label htmlFor="school"></label>
           <input
             type="text"
-            className="uni"
-            placeholder="University"
-            onClick={this.preview}
+            placeholder="School"
+            className="school"
+            onChange={this.updateInput}
           ></input>
           <label htmlFor="degree"></label>
           <input
             type="text"
             className="degree"
             placeholder="Degree"
-            onClick={this.preview}
+            onChange={this.updateInput}
           ></input>
-          <label htmlFor="start"></label>
+          <label htmlFor="date"></label>
           <input
             type="text"
-            className="start"
-            placeholder="Start date"
-            onClick={this.preview}
+            className="date"
+            placeholder="Date"
+            onChange={this.updateInput}
           ></input>
           <label htmlFor="end"></label>
           <input
             type="text"
-            className="end"
-            placeholder="End date"
-            onClick={this.preview}
+            className="location"
+            placeholder="Location"
+            onChange={this.updateInput}
           ></input>
-          <button type="submit">Submit</button>
         </form>
+        <p>School : {this.state.School}</p>
+        <p>Degree : {this.state.Degree}</p>
+        <p>Date : {this.state.Date}</p>
+        <p>Location : {this.state.Location}</p>
       </div>
     );
   }
