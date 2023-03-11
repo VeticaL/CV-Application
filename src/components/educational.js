@@ -11,7 +11,7 @@ class Education extends React.Component {
     };
     this.updateInput = this.updateInput.bind(this);
   }
-
+  
   updateInput(event) {
     if (event.target.className === "school") {
       this.setState({ School: event.target.value });
@@ -23,7 +23,7 @@ class Education extends React.Component {
       this.setState({ Location: event.target.value });
     }
   }
-
+  
   render() {
     return (
       <div>
