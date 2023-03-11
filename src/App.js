@@ -8,17 +8,17 @@ class App extends React.Component {
   render() {
     return (
       <div className="App">
-        <h2>CV CREATOR</h2>
+        <h1>CV CREATOR</h1>
         <div className="general">
-          <h3>Personal Information</h3>
+          <h2>Personal Information</h2>
           <General />
         </div>
-        <div className="general">
-        <h3>Education</h3>
+        <div className="education">
+        <h2>Education</h2>
           <Education />
         </div>
-        <div className="general">
-        <h3>Experience</h3>
+        <div className="experience">
+        <h2>Experience</h2>
           <Practical />
         </div>
       </div>
