@@ -37,7 +37,7 @@
   }
 }
 
-h2 {
+h1 {
   text-align: left;
   margin-left: 20px;
 }
@@ -55,4 +55,8 @@ form {
 
 input {
   margin-right: .2rem;
+}
+
+.general, .education, .experience {
+  margin: 3rem;
 }
